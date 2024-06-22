@@ -77,7 +77,6 @@ for (let i = 3; i < array1.length; i++) {
 }
 const button1 = document.querySelector('#services_btn');
 const button2 = document.querySelector('#cases_action-hide');
-// const button3 = document.querySelector('#cases_action-show');
 if (button1) {
     button1.addEventListener('click', () => {
         let elements1 = document.querySelectorAll('.services_items-right.none');
@@ -87,41 +86,40 @@ if (button1) {
         }
         button1.classList.add('none');
         button2.classList.add('none');
-        // button3.classList.remove('none');
     });
 }
 
-let portfolio_array = document.querySelectorAll('.portfolio_item');
-for (let i = 6; i < portfolio_array.length; i++) {
-    portfolio_array[i].classList.add('none');
-}
-const portfolio_btn = document.querySelector('#portfolio_btn');
-if (portfolio_btn) {
-    portfolio_btn.addEventListener('click', () => {
-        let elements1 = document.querySelectorAll('.portfolio_item.none');
+// let portfolio_array = document.querySelectorAll('.portfolio_item');
+// for (let i = 6; i < portfolio_array.length; i++) {
+//     portfolio_array[i].classList.add('none');
+// }
+// const portfolio_btn = document.querySelector('#portfolio_btn');
+// if (portfolio_btn) {
+//     portfolio_btn.addEventListener('click', () => {
+//         let elements1 = document.querySelectorAll('.portfolio_item.none');
+//
+//         for (let i = 0; i < elements1.length; i++) {
+//             elements1[i].classList.remove('none');
+//         }
+//         portfolio_btn.classList.add('none');
+//     });
+// }
 
-        for (let i = 0; i < elements1.length; i++) {
-            elements1[i].classList.remove('none');
-        }
-        portfolio_btn.classList.add('none');
-    });
-}
-
-let iventsCases_array = document.querySelectorAll('.iventCases_item-box');
-for (let i = 3; i < iventsCases_array.length; i++) {
-    iventsCases_array[i].classList.add('none');
-}
-const iventsCases_btn = document.querySelector('#iventsCases_btn');
-if (iventsCases_btn) {
-    iventsCases_btn.addEventListener('click', () => {
-        let elements1 = document.querySelectorAll('.iventCases_item-box.none');
-
-        for (let i = 0; i < elements1.length; i++) {
-            elements1[i].classList.remove('none');
-        }
-        iventsCases_btn.classList.add('none');
-    });
-}
+// let iventsCases_array = document.querySelectorAll('.iventCases_item-box');
+// for (let i = 3; i < iventsCases_array.length; i++) {
+//     iventsCases_array[i].classList.add('none');
+// }
+// const iventsCases_btn = document.querySelector('#iventsCases_btn');
+// if (iventsCases_btn) {
+//     iventsCases_btn.addEventListener('click', () => {
+//         let elements1 = document.querySelectorAll('.iventCases_item-box.none');
+//
+//         for (let i = 0; i < elements1.length; i++) {
+//             elements1[i].classList.remove('none');
+//         }
+//         iventsCases_btn.classList.add('none');
+//     });
+// }
 
 // $(".tariff_items").slick({
 //     dots: false,
@@ -167,8 +165,6 @@ $(".target_items").slick({
     speed: 1200,
     slidesToShow: 4,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '0',
     prevArrow: '<div class="arrow-prev"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
         '<circle cx="15" cy="15" r="14" transform="matrix(-1 0 0 1 30 0)" fill="#2B2B2B" stroke="#FFFCFA" stroke-width="2"/>\n' +
         '<path d="M18 8L11 15L18 22" stroke="#FFFCFA" stroke-width="2"/>\n' +
@@ -193,8 +189,6 @@ $(".target_items").slick({
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                dots: false,
-                adaptiveHeight: true,
                 variableWidth: true
             }
         },
@@ -204,7 +198,6 @@ $(".target_items").slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: false,
-                adaptiveHeight: true,
                 variableWidth: true
             }
         }
