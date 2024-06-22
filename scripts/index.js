@@ -249,6 +249,98 @@ $(".instScreen_items-mob").slick({
     ]
 });
 
+// const reelsItems = document.querySelectorAll('.reels_item');
+// reelsItems.forEach((item, index) => {
+//     if (index >= 3) {
+//         item.classList.add('none');
+//     }
+//     const reelsAll = reelsItem.querySelector('.reels_all');
+//
+//     // Если блок reels_all найден, получаем все его дочерние элементы с классом reels_item-one
+//     if (reelsAll) {
+//         const reelsItemOnes = reelsAll.querySelectorAll('.reels_item-one');
+//
+//         // Проходимся по всем элементам reels_item-one
+//         reelsItemOnes.forEach((item, index) => {
+//             // Если индекс элемента больше или равен 4, добавляем класс none
+//             if (index >= 4) {
+//                 item.classList.add('none');
+//             }
+//         });
+//     }
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const reelsItems = document.querySelectorAll('.reels_item');
+
+    // Начальная настройка для reels_item и reels_item-one
+    reelsItems.forEach((reelsItem, index) => {
+        if (index >= 3) {
+            reelsItem.classList.add('none');
+        } else {
+            const reelsAll = reelsItem.querySelector('.reels_all');
+            if (reelsAll) {
+                const reelsItemOnes = reelsAll.querySelectorAll('.reels_item-one');
+                reelsItemOnes.forEach((item, index) => {
+                    if (index >= 4) {
+                        item.classList.add('none');
+                    }
+                });
+            }
+        }
+    });
+
+    const reelsBtn = document.querySelector('#reels_btn');
+    const reelsBtnHide = document.querySelector('#reels_btn-hide');
+
+    if (reelsBtn && reelsBtnHide) {
+        reelsBtn.addEventListener('click', () => {
+            // Показать все скрытые блоки reels_item и reels_item-one
+            reelsItems.forEach((reelsItem) => {
+                reelsItem.classList.remove('none');
+                const reelsAll = reelsItem.querySelector('.reels_all');
+                if (reelsAll) {
+                    const reelsItemOnes = reelsAll.querySelectorAll('.reels_item-one');
+                    reelsItemOnes.forEach((item) => {
+                        item.classList.remove('none');
+                    });
+                }
+            });
+
+            // Скрыть кнопку reels_btn и показать кнопку reels_btn-hide
+            reelsBtn.classList.add('none');
+            reelsBtnHide.classList.remove('none');
+        });
+
+        reelsBtnHide.addEventListener('click', () => {
+            // Скрыть блоки reels_item начиная с 4-го и reels_item-one начиная с 5-го
+            reelsItems.forEach((reelsItem, index) => {
+                if (index >= 3) {
+                    reelsItem.classList.add('none');
+                } else {
+                    const reelsAll = reelsItem.querySelector('.reels_all');
+                    if (reelsAll) {
+                        const reelsItemOnes = reelsAll.querySelectorAll('.reels_item-one');
+                        reelsItemOnes.forEach((item, index) => {
+                            if (index >= 4) {
+                                item.classList.add('none');
+                            }
+                        });
+                    }
+                }
+            });
+
+            // Показать кнопку reels_btn и скрыть кнопку reels_btn-hide
+            reelsBtn.classList.remove('none');
+            reelsBtnHide.classList.add('none');
+        });
+    }
+});
+
+
+
+
+
 
 // $(".advertisingTarget_items").slick({
 //     centerMode: true,

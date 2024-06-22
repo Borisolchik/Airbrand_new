@@ -463,6 +463,92 @@ a {
     display: flex;
     justify-content: center;
 }
+
+.reels .container {
+    padding: 0 40px 150px;
+}
+.reels_title {
+    font-family: "Sansation Regular", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    margin-bottom: 40px;
+}
+.reels_item {
+    margin-top: 70px;
+}
+.reels_item:first-child {
+    margin-top: 0;
+}
+.reels_item-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 128%;
+    font-variant: small-caps;
+    color: #2b2b2b;
+    margin-bottom: 28px;
+}
+.reels_all {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.reels_item.none {
+    display: none;
+}
+#reels_btn, #reels_btn-hide {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: none;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#reels_btn span, #reels_btn-hide span{
+    font-family: "Sansation Regular", sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #000;
+}
+
+#reels_btn-hide.none {
+    display: none;
+}
+#reels_btn.none {
+    display: none;
+}
+#reels_btn:hover span{
+    font-family: "Sansation Bold", sans-serif;
+}
+#reels_btn-hide:hover span{
+    font-family: "Sansation Bold", sans-serif;
+}
+#reels_btn:hover .main{
+    display: none;
+}
+#reels_btn .hover{
+    display: none;
+}
+#reels_btn-hide:hover .main{
+    display: none;
+}
+#reels_btn-hide .hover{
+    display: none;
+}
+#reels_btn:hover .hover{
+    display: block;
+}
+#reels_btn-hide:hover .hover{
+    display: block;
+}
+.reels_all .reels_item-one.none {
+    display: none;
+}
+.reels .none {
+    display: none;
+}
 /* 1380px - 1439px */
 @media screen and (max-width: 1439px) {
     .banner_right {
@@ -691,6 +777,14 @@ a {
     .services_items-right {
         width: 100%;
     }
+
+    .reels_all {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .reels_all::-webkit-scrollbar {
+        width: 0;
+    }
 }
 /* 481px - 900px */
 @media screen and (max-width: 900px) {
@@ -698,15 +792,19 @@ a {
         font-size: 30px;
         margin-bottom: 15px;
     }
+
     .banner_description {
         font-size: 15px;
     }
+
     .banner_right {
         width: 100%;
     }
+
     .banner_right img {
         max-width: 335px;
     }
+
     .banner_action-text {
         font-family: "Sansation Bold", sans-serif;
         font-size: 15px;
@@ -716,18 +814,22 @@ a {
     .weCanResult .container {
         padding: 0 35px 110px;
     }
+
     .weCan_title {
         font-size: 26px;
         margin-bottom: 40px;
     }
+
     .weCan_item {
         padding: 16px 0;
         gap: 18px;
         align-items: start;
     }
+
     .weCan_item-number {
         font-size: 15px;
     }
+
     .weCan_item-text {
         font-size: 15px;
     }
@@ -735,10 +837,12 @@ a {
     .results_item-text {
         font-size: 15px;
     }
+
     .results_item {
         margin-bottom: 12px;
         align-items: start;
     }
+
     .results_item-number svg {
         width: 16px;
         height: 16px;
@@ -748,13 +852,16 @@ a {
     .clients .container {
         padding: 0 35px 99px;
     }
+
     .clients_title {
         font-size: 26px;
         margin-bottom: 40px;
     }
+
     .clients_items .desc {
         display: none;
     }
+
     .clients_items .only_mob {
         display: block;
     }
@@ -762,10 +869,12 @@ a {
     .tariff .container {
         padding: 0 35px 110px;
     }
+
     .tariff_item {
         padding: 31px 20px 31px 25px;
         min-height: fit-content;
     }
+
     .tariff_title {
         font-family: "Sansation Regular", sans-serif;
         font-size: 30px;
@@ -775,25 +884,31 @@ a {
         margin-bottom: 44px;
         max-width: 265px;
     }
+
     .tariff_item-title {
         font-size: 20px;
         margin-bottom: 17px;
     }
-    .tariff_item-title span{
+
+    .tariff_item-title span {
         font-size: 20px;
     }
+
     .tariff_item-price-text {
         font-size: 12px;
         margin-bottom: 0;
     }
+
     .tariff_item-price {
         font-size: 18px;
         margin-bottom: 10px;
     }
+
     .tariff_item-included-title {
         font-size: 16px;
         margin-bottom: 10px;
     }
+
     .tariff_item-included-items {
         font-size: 14px;
     }
@@ -801,43 +916,53 @@ a {
     .services .container {
         padding: 0 35px 110px;
     }
+
     .services_title {
         font-size: 26px;
         margin-bottom: 40px;
     }
+
     .services_items {
         margin-bottom: 55px;
     }
+
     .services_item {
         padding: 25px 20px;
     }
+
     .services_item-header {
         flex-direction: column;
         align-items: start;
         gap: 10px;
         margin-bottom: 10px;
     }
+
     .services_item-title {
         font-size: 20px;
         text-transform: none;
     }
+
     .services_item-price {
         font-size: 16px;
     }
+
     .services_item-text {
         font-size: 16px;
     }
+
     .services .banner_action {
         justify-content: start;
     }
 
-   .target .container {
-       padding: 0 35px 165px;
-   }
-   .target_title {
-       font-size: 26px;
-       margin-bottom: 40px;
-   }
+    .target .container {
+        padding: 0 35px 165px;
+    }
+
+    .target_title {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
     .target .slick-slide img {
         max-width: 245px;
     }
@@ -849,15 +974,18 @@ a {
         background: none;
         border: none;
     }
-    #services_btn span{
+
+    #services_btn span {
         font-family: "Sansation Regular", sans-serif;
         font-size: 16px;
         text-decoration: underline;
         color: #000;
     }
+
     #services_btn.none {
         display: none;
     }
+
     .services_items-right.none {
         display: none;
     }
@@ -865,16 +993,48 @@ a {
     .instScreen .container {
         padding: 0 35px 110px;
     }
+
     .instScreen_title {
         font-size: 26px;
         margin-bottom: 40px;
         max-width: 320px;
     }
+
     .instScreen_item {
         max-width: 255px;
     }
+
     .instScreen .banner_action {
         justify-content: start;
+    }
+
+    .reels .container {
+        padding: 0 35px 110px;
+    }
+
+    .reels_title {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+    .reels_item-title {
+        font-size: 18px;
+        margin-bottom: 13px;
+    }
+    .reels_item-one {
+        width: 165px;
+        min-width: 165px;
+    }
+    .reels_item-one img {
+        width: 100%;
+    }
+    .reels_all {
+        gap: 0 10px;
+    }
+    .reels_item {
+        margin-top: 40px;
+    }
+    #reels_btn, #reels_btn-hide {
+        margin-top: 20px;
     }
 }
 /* 430px - 480px */
