@@ -1089,8 +1089,8 @@ a {
         align-items: center;
     }
     .video_items.open  .video_item {
-        width: 360px;
-        min-width: 360px;
+        width: 100%;
+        max-width: 360px;
     }
     #video_btn.none {
         display: none;
