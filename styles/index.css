@@ -1046,6 +1046,7 @@ a {
         flex-wrap: nowrap;
         justify-content: start;
         margin-bottom: 30px;
+        overflow-x: scroll;
     }
     .video_items::-webkit-scrollbar {
         width: 0;
