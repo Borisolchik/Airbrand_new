@@ -330,15 +330,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Показать кнопку reels_btn и скрыть кнопку reels_btn-hide
             reelsBtn.classList.remove('none');
             reelsBtnHide.classList.add('none');
         });
     }
 });
 
-
-
+document.querySelector('#video_btn').addEventListener('click', function() {
+    document.querySelector('.video_items').classList.add('open');
+    this.classList.add('none');
+});
 
 
 
