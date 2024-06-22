@@ -295,16 +295,19 @@ a {
     margin-bottom: 80px;
 }
 .tariff_items {
-    margin: 0 -10px 55px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 55px;
 }
 .tariff_item {
     border: 1px solid #2b2b2b;
     border-radius: 1px;
     background: #fff;
     padding: 45px 22px 45px 32px;
-    margin: 0 10px;
     min-height: 535px;
     box-sizing: border-box;
+    width: 100%;
 }
 .tariff_item-title {
     font-family: "Sansation Regular", sans-serif;
@@ -413,6 +416,24 @@ a {
     display: flex;
     justify-content: center;
 }
+
+.target .container {
+    padding: 0 40px 150px;
+}
+.target_title {
+    font-family: "Sansation Regular", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    margin-bottom: 80px;
+}
+.target_item {
+    margin-right: 30px;
+}
+#services_btn {
+    display: none;
+}
+
 /* 1380px - 1439px */
 @media screen and (max-width: 1439px) {
     .banner_right {
@@ -436,6 +457,17 @@ a {
     }
     .tariff_items {
         margin-bottom: 90px;
+    }
+
+    .target .arrow-prev {
+        position: absolute;
+        left: 10px;
+        bottom: -55px;
+    }
+    .target .arrow-next {
+        position: absolute;
+        right: 10px;
+        bottom: -55px;
     }
 }
 /* 1024px - 1199px */
@@ -591,6 +623,9 @@ a {
         max-width: 50%;
     }
 
+    .tariff_items {
+        flex-wrap: wrap;
+    }
     .tariff_item {
         min-height: 578px;
     }
@@ -720,7 +755,7 @@ a {
         margin-bottom: 40px;
     }
     .services_items {
-        margin-bottom: 25px;
+        margin-bottom: 55px;
     }
     .services_item {
         padding: 25px 20px;
@@ -743,6 +778,37 @@ a {
     }
     .services .banner_action {
         justify-content: start;
+    }
+
+   .target .container {
+       padding: 0 35px 110px;
+   }
+   .target_title {
+       font-size: 26px;
+       margin-bottom: 40px;
+   }
+    .slick-slide img {
+        max-width: 245px;
+    }
+
+    #services_btn {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        background: none;
+        border: none;
+    }
+    #services_btn span{
+        font-family: "Sansation Regular", sans-serif;
+        font-size: 16px;
+        text-decoration: underline;
+        color: #000;
+    }
+    #services_btn.none {
+        display: none;
+    }
+    .services_items-right.none {
+        display: none;
     }
 }
 /* 430px - 480px */
