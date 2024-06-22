@@ -583,6 +583,28 @@ a {
     text-decoration: underline;
     color: #000;
 }
+#video_btn-hide {
+    display: none;
+    /*display: flex;*/
+    align-items: center;
+    gap: 7px;
+    background: none;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#video_btn-hide span{
+    font-family: "Sansation Regular", sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #000;
+}
+#video_btn-hide {
+    display: none;
+}
+#video_btn-hide.open {
+    display: flex;
+}
 /* 1380px - 1439px */
 @media screen and (max-width: 1439px) {
     .banner_right {
@@ -1073,6 +1095,11 @@ a {
     #video_btn.none {
         display: none;
     }
+    #video_btn-hide.open {
+        display: flex;
+        margin-bottom: 45px;
+    }
+
 
 }
 /* 430px - 480px */

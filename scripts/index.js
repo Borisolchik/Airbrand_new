@@ -338,7 +338,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelector('#video_btn').addEventListener('click', function() {
     document.querySelector('.video_items').classList.add('open');
+    const videoBtnHide = document.querySelector('#video_btn-hide');
     this.classList.add('none');
+    videoBtnHide.classList.add('open');
+});
+
+document.querySelector('#video_btn-hide').addEventListener('click', function() {
+    document.querySelector('.video_items').classList.remove('open');
+    this.classList.remove('open');
+    const videoBtn = document.querySelector('#video_btn');
+    videoBtn.classList.remove('none');
 });
 
 
