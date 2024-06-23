@@ -297,7 +297,7 @@ $(".instScreen_items-mob").slick({
 $(".reviews_items").slick({
     dots: false,
     infinite: true,
-    speed: 1200,
+    speed: 1,
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: '<div class="arrow-prev"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
