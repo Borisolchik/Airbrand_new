@@ -1242,4 +1242,8 @@ a {
     .banner_description {
         font-size: 13px;
     }
+
+    .development_items.mobile {
+        gap: 20px 15px;
+    }
 }
