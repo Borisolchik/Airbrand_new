@@ -728,6 +728,26 @@ a {
     bottom: -55px;
     cursor: pointer;
 }
+
+.grugany .container {
+    padding: 0 40px 170px;
+}
+.grugany_title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: #2b2b2b;
+    margin-bottom: 60px;
+}
+.grugany_items {
+    max-width: 100%;
+}
+.grugany_items img{
+    width: 100%;
+}
+.grugany_items.mob {
+    display: none;
+}
 /* 1380px - 1439px */
 @media screen and (max-width: 1439px) {
     .banner_right {
@@ -1272,10 +1292,24 @@ a {
     .branding_item img {
         height: 252px;
     }
+
+    .grugany .container {
+        padding: 0 35px 110px;
+    }
+    .grugany_title {
+        font-family: "Sansation Regular", sans-serif;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
 }
 /* 430px - 480px */
 @media screen and (max-width: 480px) {
-
+    .grugany_items {
+        display: none;
+    }
+    .grugany_items.mob {
+        display: block;
+    }
 }
 /* 320px - 429px */
 @media screen and (max-width: 429px) {
