@@ -1246,4 +1246,8 @@ a {
     .development_items.mobile {
         gap: 20px 15px;
     }
+    .development_items.mobile .development_item {
+        width: 165px;
+        min-width: 165px;
+    }
 }
