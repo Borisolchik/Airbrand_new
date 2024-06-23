@@ -931,6 +931,68 @@ a {
 .reviews .slick-list {
     padding-top: 7px !important;
 }
+
+.aboutUs .container {
+    padding: 0 40px 150px;
+}
+.aboutUs_title {
+    font-family: "Sansation Regular", sans-serif;
+    font-size: 52px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    margin-bottom: 60px;
+}
+.aboutUs_block {
+    display: flex;
+    justify-content: space-between;
+}
+.aboutUs_description {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 128%;
+    color: #2b2b2b;
+    max-width: 553px;
+}
+.aboutUs_description span {
+    font-weight: 600;
+}
+.aboutUs_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px 20px;
+    justify-content: end;
+}
+.aboutUs_item {
+    border-top: 1px solid #2b2b2b;
+}
+.aboutUs_item-number {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 128%;
+    color: #2b2b2b;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+.aboutUs_item-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 128%;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+.aboutUs_item-text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 128%;
+    font-variant: small-caps;
+    color: #2b2b2b;
+    max-width: 325px;
+}
 /* 1380px - 1439px */
 @media screen and (max-width: 1439px) {
     .banner_right {
@@ -965,6 +1027,14 @@ a {
         position: absolute;
         right: 10px;
         bottom: -55px;
+    }
+
+    .aboutUs_block {
+        flex-wrap: wrap;
+        gap: 70px;
+    }
+    .aboutUs_items {
+        justify-content: center;
     }
 }
 /* 1024px - 1199px */
@@ -1569,6 +1639,31 @@ a {
     }
     .reviews .banner_action {
         display: block;
+    }
+
+    .aboutUs .container {
+        padding: 0 35px 110px;
+    }
+    .aboutUs_title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    .aboutUs_description {
+        font-size: 15px;
+    }
+    .aboutUs_description span{
+        font-weight: 500;
+    }
+    .aboutUs_item-number {
+        font-size: 13px;
+    }
+    .aboutUs_item-title {
+        font-size: 18px;
+        margin-bottom: 13px;
+    }
+    .aboutUs_item-text {
+        font-size: 15px;
+        max-width: 100%;
     }
 }
 /* 430px - 480px */
