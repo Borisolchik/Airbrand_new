@@ -294,6 +294,59 @@ $(".instScreen_items-mob").slick({
     ]
 });
 
+$(".reviews_items").slick({
+    dots: false,
+    infinite: true,
+    speed: 1200,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<div class="arrow-prev"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<circle cx="15" cy="15" r="14" transform="matrix(-1 0 0 1 30 0)" fill="#2B2B2B" stroke="#FFFCFA" stroke-width="2"/>\n' +
+        '<path d="M18 8L11 15L18 22" stroke="#FFFCFA" stroke-width="2"/>\n' +
+        '</svg>\n</div>',
+    nextArrow: '<div class="arrow-next"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<circle cx="15" cy="15" r="14" fill="#2B2B2B" stroke="#FFFCFA" stroke-width="2"/>\n' +
+        '<path d="M12 8L19 15L12 22" stroke="#FFFCFA" stroke-width="2"/>\n' +
+        '</svg>\n</div>',
+    adaptiveHeight: true,
+    centerMode: true,
+    centerPadding: '450px',
+    responsive: [
+        {
+            breakpoint: 1380,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                adaptiveHeight: true,
+                centerMode: false,
+                centerPadding: '450px',
+
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: true,
+                centerPadding: '0',
+            }
+        },
+        {
+            breakpoint: 901,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                centerMode: false,
+                variableWidth: false,
+                centerPadding: '0',
+            }
+        }
+    ]
+});
+
 // const reelsItems = document.querySelectorAll('.reels_item');
 // reelsItems.forEach((item, index) => {
 //     if (index >= 3) {
