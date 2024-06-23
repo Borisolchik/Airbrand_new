@@ -1479,4 +1479,8 @@ a {
         width: 150px;
         min-width: 150px;
     }
+
+    .portfolio_item-image div {
+        max-width: 155px;
+    }
 }
