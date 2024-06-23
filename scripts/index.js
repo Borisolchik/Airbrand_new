@@ -204,6 +204,51 @@ $(".target_items").slick({
     ]
 });
 
+$(".branding_items").slick({
+    dots: false,
+    infinite: true,
+    speed: 1200,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<div class="arrow-prev"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<circle cx="15" cy="15" r="14" transform="matrix(-1 0 0 1 30 0)" fill="#2B2B2B" stroke="#FFFCFA" stroke-width="2"/>\n' +
+        '<path d="M18 8L11 15L18 22" stroke="#FFFCFA" stroke-width="2"/>\n' +
+        '</svg>\n</div>',
+    nextArrow: '<div class="arrow-next"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<circle cx="15" cy="15" r="14" fill="#2B2B2B" stroke="#FFFCFA" stroke-width="2"/>\n' +
+        '<path d="M12 8L19 15L12 22" stroke="#FFFCFA" stroke-width="2"/>\n' +
+        '</svg>\n</div>',
+    adaptiveHeight: true,
+    responsive: [
+        {
+            breakpoint: 1380,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: false,
+                adaptiveHeight: true,
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                variableWidth: true
+            }
+        },
+        {
+            breakpoint: 901,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                variableWidth: true
+            }
+        }
+    ]
+});
+
 $(".instScreen_items-mob").slick({
     dots: false,
     infinite: true,
@@ -362,42 +407,28 @@ document.addEventListener('DOMContentLoaded', function() {
     var developmentItemsBlock = document.querySelector('.development_items');
     var showButton = document.getElementById('development_btn');
     var hideButton = document.getElementById('development_btn-hide');
-
-    // Скрываем все элементы .development_item, кроме первых 10
     for (var i = 10; i < developmentItems.length; i++) {
         developmentItems[i].classList.add('none');
     }
-
-    // Обработчик нажатия на кнопку #development_btn
     showButton.addEventListener('click', function() {
-        // Убираем класс .none у всех .development_item
         developmentItems.forEach(function(item) {
             item.classList.remove('none');
         });
-
-        // Добавляем класс .none для кнопки #development_btn и убираем у #development_btn_hide
         showButton.classList.add('none');
         hideButton.classList.add('open');
-
         if (window.innerWidth < 1200) {
             developmentItemsBlock.classList.add('mobile');
         }
     });
 
-    // Обработчик нажатия на кнопку #development_btn_hide
     hideButton.addEventListener('click', function() {
-        // Добавляем класс .none для кнопки #development_btn_hide
         hideButton.classList.remove('open');
-
-        // Возвращаем класс .none для всех .development_item, кроме первых 10
         for (var i = 10; i < developmentItems.length; i++) {
             developmentItems[i].classList.add('none');
         }
         if (window.innerWidth < 1200) {
             developmentItemsBlock.classList.remove('mobile');
         }
-
-        // Убираем класс .none у кнопки #development_btn и показываем ее
         showButton.classList.remove('none');
     });
 });
