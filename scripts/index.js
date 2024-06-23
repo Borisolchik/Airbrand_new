@@ -317,8 +317,6 @@ $(".instScreen_items-mob").slick({
 
 document.addEventListener('DOMContentLoaded', () => {
     const reelsItems = document.querySelectorAll('.reels_item');
-
-    // Начальная настройка для reels_item и reels_item-one
     reelsItems.forEach((reelsItem, index) => {
         if (index >= 3) {
             reelsItem.classList.add('none');
@@ -352,13 +350,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Скрыть кнопку reels_btn и показать кнопку reels_btn-hide
             reelsBtn.classList.add('none');
             reelsBtnHide.classList.remove('none');
         });
 
         reelsBtnHide.addEventListener('click', () => {
-            // Скрыть блоки reels_item начиная с 4-го и reels_item-one начиная с 5-го
             reelsItems.forEach((reelsItem, index) => {
                 if (index >= 3) {
                     reelsItem.classList.add('none');
@@ -430,6 +426,32 @@ document.addEventListener('DOMContentLoaded', function() {
             developmentItemsBlock.classList.remove('mobile');
         }
         showButton.classList.remove('none');
+    });
+
+
+    var portfolioItems = document.querySelectorAll('.portfolio_item');
+    if (window.innerWidth < 901) {
+        portfolioItems.forEach((item, index) => {
+            if (index >= 4) {
+                item.classList.add('none');
+            }
+            if(index === 3) {
+                item.classList.add('bottom_none');
+            }
+        })
+    }
+
+    var portfolioBtn = document.getElementById('portfolio_btn');
+    portfolioBtn.addEventListener('click', function() {
+        portfolioBtn.classList.add('none');
+        portfolioItems.forEach((item, index) => {
+            if (index >= 4) {
+                item.classList.remove('none');
+            }
+            if(index === 3) {
+                item.classList.remove('bottom_none');
+            }
+        })
     });
 });
 
