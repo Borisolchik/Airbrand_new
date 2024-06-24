@@ -150,6 +150,7 @@ a {
     position: relative;
     display: block;
     width: fit-content;
+    /*transition: all 1s ease;*/
 }
 .btn_bg {
     border: 0.90px solid #2b2b2b;
@@ -159,6 +160,7 @@ a {
     position: absolute;
     z-index: -1;
     left: 5px;
+    transition: all 1s ease;
 }
 .btn:hover .btn_bg {
     background: #2b2b2b;
@@ -307,7 +309,7 @@ a {
     padding: 45px 22px 45px 32px;
     min-height: 535px;
     box-sizing: border-box;
-    width: 100%;
+    /*width: 100%;*/
 }
 .tariff_item-title {
     font-family: "Sansation Regular", sans-serif;
@@ -1214,9 +1216,11 @@ a {
     .banner_right {
         max-width: 675px;
     }
-
-    .team_items {
-        justify-content: center;
+    .steps_items {
+        gap: 20px 15px;
+    }
+    .steps_item {
+        padding: 36px 17px;
     }
 }
 /* 1200px - 1379px */
@@ -1473,6 +1477,7 @@ a {
 
     .tariff_items {
         flex-wrap: wrap;
+        justify-content: start;
     }
     .tariff_item {
         min-height: 578px;
@@ -1566,12 +1571,6 @@ a {
         font-size: 26px;
         margin-bottom: 40px;
     }
-    .clients_items .desc {
-        display: none;
-    }
-    .clients_items .only_mob {
-        display: block;
-    }
 
     .tariff .container {
         padding: 0 35px 110px;
@@ -1579,6 +1578,7 @@ a {
     .tariff_item {
         padding: 31px 20px 31px 25px;
         min-height: fit-content;
+        width: 100%;
     }
     .tariff_title {
         font-family: "Sansation Regular", sans-serif;
@@ -1587,7 +1587,6 @@ a {
         text-transform: uppercase;
         color: #2b2b2b;
         margin-bottom: 44px;
-        max-width: 265px;
     }
     .tariff_item-title {
         font-size: 20px;
@@ -1856,8 +1855,9 @@ a {
     }
     .reviews_item {
         padding: 34px 30px;
-        height: 100%;
-        margin: 0 7px 0px 1px;
+        height: 430px;
+        box-sizing: border-box;
+        /*margin: 0 7px 0px 1px;*/
     }
     .reviews_item-name {
         font-size: 20px;
@@ -2031,6 +2031,21 @@ a {
     }
     .grugany_items.mob {
         display: block;
+    }
+    .clients_items .desc {
+        display: none;
+    }
+    .clients_items .only_mob {
+        display: block;
+    }
+    .reviews_item {
+        padding: 34px 30px;
+        height: 100%;
+        box-sizing: border-box;
+        margin: 0 7px 0px 1px;
+    }
+    .tariff_title {
+        max-width: 265px;
     }
 }
 /* 320px - 429px */

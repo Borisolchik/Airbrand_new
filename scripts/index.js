@@ -57,7 +57,6 @@ $(document).ready(function() {
 $(function() {
     let header = $('.header_scroll');
     let header_mob = $('.header-mob');
-    // let header_mob_hide = $('.header-mob.hide');
 
     $(window).scroll(function() {
         if($(this).scrollTop() > 1) {
@@ -89,76 +88,6 @@ if (button1) {
     });
 }
 
-// let portfolio_array = document.querySelectorAll('.portfolio_item');
-// for (let i = 6; i < portfolio_array.length; i++) {
-//     portfolio_array[i].classList.add('none');
-// }
-// const portfolio_btn = document.querySelector('#portfolio_btn');
-// if (portfolio_btn) {
-//     portfolio_btn.addEventListener('click', () => {
-//         let elements1 = document.querySelectorAll('.portfolio_item.none');
-//
-//         for (let i = 0; i < elements1.length; i++) {
-//             elements1[i].classList.remove('none');
-//         }
-//         portfolio_btn.classList.add('none');
-//     });
-// }
-
-// let iventsCases_array = document.querySelectorAll('.iventCases_item-box');
-// for (let i = 3; i < iventsCases_array.length; i++) {
-//     iventsCases_array[i].classList.add('none');
-// }
-// const iventsCases_btn = document.querySelector('#iventsCases_btn');
-// if (iventsCases_btn) {
-//     iventsCases_btn.addEventListener('click', () => {
-//         let elements1 = document.querySelectorAll('.iventCases_item-box.none');
-//
-//         for (let i = 0; i < elements1.length; i++) {
-//             elements1[i].classList.remove('none');
-//         }
-//         iventsCases_btn.classList.add('none');
-//     });
-// }
-
-// $(".tariff_items").slick({
-//     dots: false,
-//     infinite: true,
-//     speed: 1200,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     centerMode: true,
-//     centerPadding: '0',
-//     prevArrow: '<div class="arrow-prev"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-//         '<circle cx="15" cy="15" r="14" transform="matrix(-1 0 0 1 30 0)" fill="#2B2B2B" stroke="#FFFCFA" stroke-width="2"/>\n' +
-//         '<path d="M18 8L11 15L18 22" stroke="#FFFCFA" stroke-width="2"/>\n' +
-//         '</svg>\n</div>',
-//     nextArrow: '<div class="arrow-next"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-//         '<circle cx="15" cy="15" r="14" fill="#2B2B2B" stroke="#FFFCFA" stroke-width="2"/>\n' +
-//         '<path d="M12 8L19 15L12 22" stroke="#FFFCFA" stroke-width="2"/>\n' +
-//         '</svg>\n</div>',
-//     adaptiveHeight: true,
-//     responsive: [
-//         {
-//             breakpoint: 1380,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 adaptiveHeight: true,
-//             }
-//         },
-//         {
-//             breakpoint: 901,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 adaptiveHeight: true,
-//             }
-//         }
-//     ]
-// });
 $(".target_items").slick({
     dots: false,
     infinite: true,
@@ -336,6 +265,17 @@ $(".reviews_items").slick({
         {
             breakpoint: 901,
             settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                centerMode: false,
+                variableWidth: false,
+                centerPadding: '0',
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: false,
@@ -347,26 +287,20 @@ $(".reviews_items").slick({
     ]
 });
 
-// const reelsItems = document.querySelectorAll('.reels_item');
-// reelsItems.forEach((item, index) => {
-//     if (index >= 3) {
-//         item.classList.add('none');
-//     }
-//     const reelsAll = reelsItem.querySelector('.reels_all');
-//
-//     // Если блок reels_all найден, получаем все его дочерние элементы с классом reels_item-one
-//     if (reelsAll) {
-//         const reelsItemOnes = reelsAll.querySelectorAll('.reels_item-one');
-//
-//         // Проходимся по всем элементам reels_item-one
-//         reelsItemOnes.forEach((item, index) => {
-//             // Если индекс элемента больше или равен 4, добавляем класс none
-//             if (index >= 4) {
-//                 item.classList.add('none');
-//             }
-//         });
-//     }
-// });
+document.addEventListener('DOMContentLoaded', function() {
+    var menuLinks = document.querySelectorAll('.menu__link');
+    var menuIcon = document.querySelector('.menu__icon');
+    const menuBody = document.body.querySelector('.menu__body')
+
+    menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (menuIcon.classList.contains('_active')) {
+                menuIcon.classList.toggle('_active');
+            }
+            menuBody.classList.toggle('_active')
+        });
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const reelsItems = document.querySelectorAll('.reels_item');
@@ -522,3 +456,23 @@ function openInfo(evt, info) {
     document.getElementById(info).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+    anchorLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
