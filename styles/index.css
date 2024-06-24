@@ -1206,6 +1206,9 @@ a {
     text-transform: uppercase;
     color: #fffcfa;
 }
+.footer-mob {
+    display: none;
+}
 /* 1380px - 1439px */
 @media screen and (max-width: 1439px) {
     .banner_right {
