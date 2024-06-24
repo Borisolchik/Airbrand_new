@@ -1107,10 +1107,53 @@ a {
     line-height: 128%;
     color: #2b2b2b;
 }
+
+.team .container {
+    padding: 0 40px 170px;
+    border-bottom: 1px solid #000;;
+}
+.team_title {
+    font-family: "Sansation Regular", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    margin-bottom: 40px;
+}
+.team_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 20px;
+}
+.team_item-photo {
+    max-width: 317px;
+    margin-bottom: 20px;
+}
+.team_item-photo img{
+    width: 100%;
+}
+.team_item-name {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 128%;
+    color: #2b2b2b;
+    margin-bottom: 5px;
+}
+.team_item-function {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 128%;
+    color: #2b2b2b;
+}
 /* 1380px - 1439px */
 @media screen and (max-width: 1439px) {
     .banner_right {
         max-width: 675px;
+    }
+
+    .team_items {
+        justify-content: center;
     }
 }
 /* 1200px - 1379px */
@@ -1223,6 +1266,10 @@ a {
 
     .history_item {
         max-width: 440px;
+    }
+
+    .team_item-photo {
+        max-width: 300px;
     }
 }
 /* 901px - 1023px */
@@ -1393,6 +1440,10 @@ a {
 
     .history_item {
         max-width: 100%;
+    }
+
+    .team_item-photo {
+        max-width: 260px;
     }
 }
 /* 481px - 900px */
@@ -1846,6 +1897,28 @@ a {
     .history_item-text {
         font-size: 15px;
     }
+
+    .team .container {
+        padding: 0 35px 110px;
+    }
+    .team_title {
+        font-size: 26px;
+        margin-bottom: 45px;
+    }
+    .team_items {
+        gap: 50px 10px;
+    }
+    .team_item-photo {
+        max-width: 174px;
+        margin-bottom: 11px;
+    }
+    .team_item-name {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .team_item-function {
+        font-size: 13px;
+    }
 }
 /* 430px - 480px */
 @media screen and (max-width: 480px) {
@@ -1879,5 +1952,9 @@ a {
 
     .difference_title {
         font-size: 24px;
+    }
+
+    .team_item-photo {
+        max-width: 155px;
     }
 }
