@@ -1704,9 +1704,11 @@ a {
     .reels_item-one {
         width: 165px;
         min-width: 165px;
+        height: 294px;
     }
     .reels_item-one iframe {
         width: 100% !important;
+        height: 100% !important;
     }
     .reels_all {
         gap: 0 10px;
