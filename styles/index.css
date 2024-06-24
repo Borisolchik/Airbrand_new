@@ -2004,6 +2004,7 @@ a {
         display: none;
     }
     .footer-mob {
+        display: block;
         background: #2b2b2b;
     }
     .footer-mob .container {
