@@ -1705,8 +1705,8 @@ a {
         width: 165px;
         min-width: 165px;
     }
-    .reels_item-one img {
-        width: 100%;
+    .reels_item-one iframe {
+        width: 100% !important;
     }
     .reels_all {
         gap: 0 10px;
