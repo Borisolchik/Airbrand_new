@@ -47,6 +47,7 @@ a {
 }
 .header_menu-right {
     display: flex;
+    align-items: center;
     width: 680px;
     justify-content: space-between;
 }
@@ -1260,12 +1261,12 @@ a {
     }
     .tariff .arrow-prev {
         position: absolute;
-        left: 10px;
+        left: calc(50% - 40px);
         bottom: -55px;
     }
     .tariff .arrow-next {
         position: absolute;
-        right: 10px;
+        right: calc(50% - 40px);
         bottom: -55px;
     }
     .tariff_items {
@@ -1274,12 +1275,12 @@ a {
 
     .target .arrow-prev {
         position: absolute;
-        left: 10px;
+        left: calc(50% - 40px);
         bottom: -55px;
     }
     .target .arrow-next {
         position: absolute;
-        right: 10px;
+        right: calc(50% - 40px);
         bottom: -55px;
     }
 
@@ -1324,12 +1325,12 @@ a {
     }
     .instScreen_items-mob .arrow-prev {
         position: absolute;
-        left: 10px;
+        left: calc(50% - 40px);
         bottom: -55px;
     }
     .instScreen_items-mob .arrow-next {
         position: absolute;
-        right: 10px;
+        right: calc(50% - 40px);
         bottom: -55px;
     }
 
@@ -1690,6 +1691,8 @@ a {
         gap: 7px;
         background: none;
         border: none;
+        margin-left: auto;
+        margin-right: auto;
     }
     #services_btn span {
         font-family: "Sansation Regular", sans-serif;
@@ -1716,7 +1719,7 @@ a {
         max-width: 255px;
     }
     .instScreen .banner_action {
-        justify-content: start;
+        justify-content: center;
     }
 
     .reels .container {
@@ -1904,14 +1907,14 @@ a {
         font-size: 15px;
         max-width: 100%;
     }
-    .reviews .arrow-next {
-        right: 0;
-    }
-    .reviews .arrow-prev {
-        left: 0;
-    }
+    /*.reviews .arrow-next {*/
+    /*    right: 0;*/
+    /*}*/
+    /*.reviews .arrow-prev {*/
+    /*    left: 0;*/
+    /*}*/
     .reviews .banner_action {
-        display: block;
+        display: flex;
     }
 
     .aboutUs .container {

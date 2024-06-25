@@ -320,7 +320,6 @@ $(".reviews_items").slick({
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 dots: false,
-                speed: 1,
                 adaptiveHeight: true,
                 centerMode: false,
                 centerPadding: '450px',
@@ -356,10 +355,70 @@ $(".reviews_items").slick({
                 centerMode: false,
                 variableWidth: false,
                 centerPadding: '0',
+                speed: 1,
             }
         }
     ]
 });
+
+// $(".reels_all").slick({
+//     dots: false,
+//     infinite: true,
+//     speed: 1200,
+//     slidesToShow: 6,
+//     slidesToScroll: 1,
+//     prevArrow: false,
+//     nextArrow: false,
+//     // adaptiveHeight: true,
+//     centerMode: true,
+//     centerPadding: '450px',
+//     responsive: [
+//         {
+//             breakpoint: 1380,
+//             settings: {
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1,
+//                 dots: false,
+//                 adaptiveHeight: true,
+//                 centerMode: false,
+//                 centerPadding: '450px',
+//
+//             }
+//         },
+//         {
+//             breakpoint: 1200,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1,
+//                 variableWidth: true,
+//                 centerPadding: '0',
+//             }
+//         },
+//         {
+//             breakpoint: 901,
+//             settings: {
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1,
+//                 dots: false,
+//                 centerMode: false,
+//                 variableWidth: false,
+//                 centerPadding: '0',
+//             }
+//         },
+//         {
+//             breakpoint: 480,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1,
+//                 dots: false,
+//                 centerMode: false,
+//                 variableWidth: false,
+//                 centerPadding: '0',
+//                 speed: 1,
+//             }
+//         }
+//     ]
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     var menuLinks = document.querySelectorAll('.menu__link');
