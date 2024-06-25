@@ -361,6 +361,16 @@ $(".reviews_items").slick({
     ]
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const reelsAll = document.querySelector('.reels_all');
+    const firstItem = document.querySelector('.reels_item-one');
+
+    if (window.innerWidth <= 768) { // Условие для мобильных устройств
+        const scrollPosition = firstItem.offsetWidth / 2;
+        reelsAll.scrollLeft = scrollPosition;
+    }
+});
+
 // $(".reels_all").slick({
 //     dots: false,
 //     speed: 1200,
