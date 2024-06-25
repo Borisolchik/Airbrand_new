@@ -497,19 +497,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document.querySelector('#video_btn').addEventListener('click', function() {
-    document.querySelector('.video_items').classList.add('open');
-    const videoBtnHide = document.querySelector('#video_btn-hide');
-    this.classList.add('none');
-    videoBtnHide.classList.add('open');
-});
+// document.querySelector('#video_btn').addEventListener('click', function() {
+//     document.querySelector('.video_items').classList.add('open');
+//     const videoBtnHide = document.querySelector('#video_btn-hide');
+//     this.classList.add('none');
+//     videoBtnHide.classList.add('open');
+// });
 
-document.querySelector('#video_btn-hide').addEventListener('click', function() {
-    document.querySelector('.video_items').classList.remove('open');
-    this.classList.remove('open');
-    const videoBtn = document.querySelector('#video_btn');
-    videoBtn.classList.remove('none');
-});
+// document.querySelector('#video_btn-hide').addEventListener('click', function() {
+//     document.querySelector('.video_items').classList.remove('open');
+//     this.classList.remove('open');
+//     const videoBtn = document.querySelector('#video_btn');
+//     videoBtn.classList.remove('none');
+// });
 
 const items = document.querySelectorAll('.development_item');
 items.forEach((item, index) => {
@@ -518,7 +518,6 @@ items.forEach((item, index) => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
     var developmentItems = document.querySelectorAll('.development_item');
     var developmentItemsBlock = document.querySelector('.development_items');
     var showButton = document.getElementById('development_btn');
@@ -573,7 +572,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     });
-});
 
 
 function openInfo(evt, info) {
