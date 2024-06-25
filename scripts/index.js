@@ -404,12 +404,16 @@ $(".reels_all").slick({
             breakpoint: 480,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
                 dots: false,
                 centerMode: true,
                 variableWidth: false,
                 centerPadding: '100px',
-                speed: 1,
+                // speed: 1,
+                infinite: true,
+                autoplaySpeed: 0,
+                speed: 2000,
+                cssEase: 'linear',
             }
         }
     ]
