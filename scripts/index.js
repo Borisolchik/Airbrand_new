@@ -361,63 +361,63 @@ $(".reviews_items").slick({
     ]
 });
 
-$(".reels_all").slick({
-    dots: false,
-    speed: 1200,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    prevArrow: false,
-    nextArrow: false,
-    responsive: [
-        {
-            breakpoint: 1380,
-            settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                dots: false,
-                centerMode: false,
-                variableWidth: false,
-                centerPadding: '0',
-            }
-        },
-        {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                variableWidth: true,
-                centerPadding: '0',
-            }
-        },
-        {
-            breakpoint: 901,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false,
-                centerMode: true,
-                variableWidth: false,
-                centerPadding: '100px',
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 2,
-                dots: false,
-                centerMode: true,
-                variableWidth: false,
-                centerPadding: '100px',
-                // speed: 1,
-                infinite: true,
-                autoplaySpeed: 0,
-                speed: 2000,
-                cssEase: 'linear',
-            }
-        }
-    ]
-});
+// $(".reels_all").slick({
+//     dots: false,
+//     speed: 1200,
+//     slidesToShow: 6,
+//     slidesToScroll: 1,
+//     prevArrow: false,
+//     nextArrow: false,
+//     responsive: [
+//         {
+//             breakpoint: 1380,
+//             settings: {
+//                 slidesToShow: 5,
+//                 slidesToScroll: 1,
+//                 dots: false,
+//                 centerMode: false,
+//                 variableWidth: false,
+//                 centerPadding: '0',
+//             }
+//         },
+//         {
+//             breakpoint: 1200,
+//             settings: {
+//                 slidesToShow: 4,
+//                 slidesToScroll: 1,
+//                 variableWidth: true,
+//                 centerPadding: '0',
+//             }
+//         },
+//         {
+//             breakpoint: 901,
+//             settings: {
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1,
+//                 dots: false,
+//                 centerMode: true,
+//                 variableWidth: false,
+//                 centerPadding: '100px',
+//             }
+//         },
+//         {
+//             breakpoint: 480,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 2,
+//                 dots: false,
+//                 centerMode: true,
+//                 variableWidth: false,
+//                 centerPadding: '100px',
+//                 // speed: 1,
+//                 infinite: true,
+//                 autoplaySpeed: 0,
+//                 speed: 2000,
+//                 cssEase: 'linear',
+//             }
+//         }
+//     ]
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     var menuLinks = document.querySelectorAll('.menu__link');
