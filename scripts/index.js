@@ -361,64 +361,59 @@ $(".reviews_items").slick({
     ]
 });
 
-// $(".reels_all").slick({
-//     dots: false,
-//     infinite: true,
-//     speed: 1200,
-//     slidesToShow: 6,
-//     slidesToScroll: 1,
-//     prevArrow: false,
-//     nextArrow: false,
-//     // adaptiveHeight: true,
-//     centerMode: true,
-//     centerPadding: '450px',
-//     responsive: [
-//         {
-//             breakpoint: 1380,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 adaptiveHeight: true,
-//                 centerMode: false,
-//                 centerPadding: '450px',
-//
-//             }
-//         },
-//         {
-//             breakpoint: 1200,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 variableWidth: true,
-//                 centerPadding: '0',
-//             }
-//         },
-//         {
-//             breakpoint: 901,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 centerMode: false,
-//                 variableWidth: false,
-//                 centerPadding: '0',
-//             }
-//         },
-//         {
-//             breakpoint: 480,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 centerMode: false,
-//                 variableWidth: false,
-//                 centerPadding: '0',
-//                 speed: 1,
-//             }
-//         }
-//     ]
-// });
+$(".reels_all").slick({
+    dots: false,
+    speed: 1200,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: false,
+    responsive: [
+        {
+            breakpoint: 1380,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                dots: false,
+                centerMode: false,
+                variableWidth: false,
+                centerPadding: '0',
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                variableWidth: true,
+                centerPadding: '0',
+            }
+        },
+        {
+            breakpoint: 901,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                centerMode: true,
+                variableWidth: false,
+                centerPadding: '100px',
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                centerMode: true,
+                variableWidth: false,
+                centerPadding: '100px',
+                speed: 1,
+            }
+        }
+    ]
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     var menuLinks = document.querySelectorAll('.menu__link');
@@ -510,6 +505,34 @@ document.addEventListener('DOMContentLoaded', () => {
 //     const videoBtn = document.querySelector('#video_btn');
 //     videoBtn.classList.remove('none');
 // });
+document.addEventListener('DOMContentLoaded', function() {
+    const language = document.querySelector('.language');
+    const anotherLang = document.querySelector('.another_lang');
+
+    language.addEventListener('click', function() {
+        anotherLang.classList.toggle('none');
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!anotherLang.contains(event.target) && !language.contains(event.target)) {
+            anotherLang.classList.add('none');
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const language = document.querySelector('#language-2');
+    const anotherLang = document.querySelector('.another_lang-2');
+
+    language.addEventListener('click', function() {
+        anotherLang.classList.toggle('none');
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!anotherLang.contains(event.target) && !language.contains(event.target)) {
+            anotherLang.classList.add('none');
+        }
+    });
+});
 
 const items = document.querySelectorAll('.development_item');
 items.forEach((item, index) => {
