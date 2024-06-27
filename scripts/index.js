@@ -635,32 +635,6 @@ function openInfo(evt, info) {
     evt.currentTarget.className += " active";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    var lazyIframes = [].slice.call(document.querySelectorAll("iframe.lazy"));
-
-    if ("IntersectionObserver" in window) {
-        let iframeObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    let iframe = entry.target;
-                    iframe.src = iframe.dataset.src;
-                    iframe.classList.remove("lazy");
-                    iframeObserver.unobserve(iframe);
-                }
-            });
-        });
-
-        lazyIframes.forEach(function(iframe) {
-            iframeObserver.observe(iframe);
-        });
-    } else {
-        // Fallback for browsers that do not support IntersectionObserver
-        lazyIframes.forEach(function(iframe) {
-            iframe.src = iframe.dataset.src;
-            iframe.classList.remove("lazy");
-        });
-    }
-});
 
 
 
