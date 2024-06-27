@@ -1841,8 +1841,11 @@ a {
     #video_btn {
         display: flex;
         margin-bottom: 45px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .video_items.open {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -1856,6 +1859,8 @@ a {
     #video_btn-hide.open {
         display: flex;
         margin-bottom: 45px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .development .container {
