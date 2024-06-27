@@ -54,6 +54,25 @@ $(document).ready(function() {
     }
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reelsAll = document.querySelector('.reels_all');
+    const firstItem = document.querySelector('.reels_item-one');
+
+    function setInitialScrollPosition() {
+        if (window.innerWidth <= 768) { // Условие для мобильных устройств
+            const scrollPosition = firstItem.offsetWidth / 2;
+            reelsAll.scrollLeft = scrollPosition;
+        }
+    }
+
+    // Задержка выполнения для обеспечения полной отрисовки элементов
+    setTimeout(setInitialScrollPosition, 100);
+
+    window.addEventListener('resize', setInitialScrollPosition); // Обновить при изменении размера окна
+});
+
+
 $(function() {
     let header = $('.header_scroll');
     let header_mob = $('.header-mob');
@@ -361,15 +380,6 @@ $(".reviews_items").slick({
     ]
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const reelsAll = document.querySelector('.reels_all');
-    const firstItem = document.querySelector('.reels_item-one');
-
-    if (window.innerWidth <= 768) { // Условие для мобильных устройств
-        const scrollPosition = firstItem.offsetWidth / 2;
-        reelsAll.scrollLeft = scrollPosition;
-    }
-});
 
 // $(".reels_all").slick({
 //     dots: false,
@@ -625,22 +635,6 @@ function openInfo(evt, info) {
     evt.currentTarget.className += " active";
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-    anchorLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
 
-            var targetId = this.getAttribute('href').substring(1);
-            var targetElement = document.getElementById(targetId);
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-});

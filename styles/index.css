@@ -1568,9 +1568,27 @@ a {
     .reels_all {
         flex-wrap: nowrap;
         overflow-x: scroll;
+        scroll-behavior: smooth; /* плавная прокрутка */
     }
+    /* Стили для веб-китовских браузеров */
     .reels_all::-webkit-scrollbar {
-        width: 0;
+        width: 2px; /* Ширина полосы прокрутки */
+        height: 2px;
+    }
+
+    .reels_all::-webkit-scrollbar-thumb {
+        background-color: gray; /* Цвет ползунка */
+        border-radius: 4px; /* Скругленные углы */
+    }
+
+    .reels_all::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Цвет фона скроллбара */
+        border-radius: 4px; /* Скругленные углы */
+    }
+
+    .reels_item-one {
+        display: inline-block;
+        margin-right: 10px; /* Расстояние между элементами */
     }
 
     .video .banner_action {
@@ -1757,7 +1775,7 @@ a {
         max-width: 320px;
     }
     .instScreen_item {
-        max-width: 255px;
+        max-width: 285px;
     }
     .instScreen .banner_action {
         justify-content: center;
@@ -1778,6 +1796,7 @@ a {
         width: 165px;
         min-width: 165px;
         height: 294px;
+        display: inline-block;
         /*margin: 0 10px;*/
     }
 
@@ -2125,6 +2144,9 @@ a {
     .tariff_title {
         max-width: 265px;
     }
+
+
+
 }
 /* 320px - 429px */
 @media screen and (max-width: 429px) {
