@@ -55,22 +55,19 @@ $(document).ready(function() {
 
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const reelsAll = document.querySelector('.reels_all');
-    const firstItem = document.querySelector('.reels_item-one');
-
-    function setInitialScrollPosition() {
-        if (window.innerWidth <= 768) { // Условие для мобильных устройств
-            const scrollPosition = firstItem.offsetWidth / 2;
-            reelsAll.scrollLeft = scrollPosition;
-        }
-    }
-
-    // Задержка выполнения для обеспечения полной отрисовки элементов
-    setTimeout(setInitialScrollPosition, 100);
-
-    window.addEventListener('resize', setInitialScrollPosition); // Обновить при изменении размера окна
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     const reelsAll = document.querySelector('.reels_all');
+//     const firstItem = document.querySelector('.reels_item-one');
+//
+//     function setInitialScrollPosition() {
+//         if (window.innerWidth <= 768) { // Условие для мобильных устройств
+//             const scrollPosition = firstItem.offsetWidth / 2;
+//             reelsAll.scrollLeft = scrollPosition;
+//         }
+//     }
+//     setTimeout(setInitialScrollPosition, 100);
+//     window.addEventListener('resize', setInitialScrollPosition); // Обновить при изменении размера окна
+// });
 
 
 $(function() {
@@ -236,7 +233,6 @@ $(".instScreen_items-mob").slick({
     ]
 });
 $(document).ready(function() {
-    // Инициализация Slick слайдера
     $(".steps_items").slick({
         dots: false,
         infinite: true,
@@ -289,7 +285,6 @@ $(document).ready(function() {
         ]
     });
 
-    // Найти максимальную высоту слайда
     function setMaxHeight() {
         var maxHeight = 0;
         $('.steps_items .slick-slide').each(function() {
@@ -298,19 +293,12 @@ $(document).ready(function() {
                 maxHeight = slideHeight;
             }
         });
-        // Установить максимальную высоту для всех слайдов
         $('.steps_items .slick-slide').css('height', maxHeight + 'px');
     }
-
-    // Вызвать функцию после загрузки слайдера
     setMaxHeight();
-
-    // Перезапустить функцию при изменении размера окна
     $(window).on('resize', function() {
         setMaxHeight();
     });
-
-    // Вызвать функцию после полной загрузки всех изображений
     $(window).on('load', function() {
         setMaxHeight();
     });
@@ -379,65 +367,6 @@ $(".reviews_items").slick({
         }
     ]
 });
-
-
-// $(".reels_all").slick({
-//     dots: false,
-//     speed: 1200,
-//     slidesToShow: 6,
-//     slidesToScroll: 1,
-//     prevArrow: false,
-//     nextArrow: false,
-//     responsive: [
-//         {
-//             breakpoint: 1380,
-//             settings: {
-//                 slidesToShow: 5,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 centerMode: false,
-//                 variableWidth: false,
-//                 centerPadding: '0',
-//             }
-//         },
-//         {
-//             breakpoint: 1200,
-//             settings: {
-//                 slidesToShow: 4,
-//                 slidesToScroll: 1,
-//                 variableWidth: true,
-//                 centerPadding: '0',
-//             }
-//         },
-//         {
-//             breakpoint: 901,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 centerMode: true,
-//                 variableWidth: false,
-//                 centerPadding: '100px',
-//             }
-//         },
-//         {
-//             breakpoint: 480,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 2,
-//                 dots: false,
-//                 centerMode: true,
-//                 variableWidth: false,
-//                 centerPadding: '100px',
-//                 // speed: 1,
-//                 infinite: true,
-//                 autoplaySpeed: 0,
-//                 speed: 2000,
-//                 cssEase: 'linear',
-//             }
-//         }
-//     ]
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
     var menuLinks = document.querySelectorAll('.menu__link');
@@ -516,19 +445,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// document.querySelector('#video_btn').addEventListener('click', function() {
-//     document.querySelector('.video_items').classList.add('open');
-//     const videoBtnHide = document.querySelector('#video_btn-hide');
-//     this.classList.add('none');
-//     videoBtnHide.classList.add('open');
-// });
-
-// document.querySelector('#video_btn-hide').addEventListener('click', function() {
-//     document.querySelector('.video_items').classList.remove('open');
-//     this.classList.remove('open');
-//     const videoBtn = document.querySelector('#video_btn');
-//     videoBtn.classList.remove('none');
-// });
 document.addEventListener('DOMContentLoaded', function() {
     const language = document.querySelector('.language');
     const anotherLang = document.querySelector('.another_lang');
